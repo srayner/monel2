@@ -1,0 +1,106 @@
+$back-color: #fafafa;
+$selected-color: #edf0f2;
+$fore-color:#737373;
+$fore-selected-color: #ef752f;
+
+body {
+    background-color: #eeeeee;
+}
+
+.side-menu {
+    height: 100%;
+    width: 58px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #fafafa;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: 0.3s;
+    transition-timing-function: ease-in;
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    -webkit-font-smoothing: antialiased;
+    border-right: 1px solid #c7c7c7;
+    box-shadow: 0 1px 0px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+    &.open {
+        width: 200px;
+
+        ul {
+            li {
+                ul {
+                    visibility: visible;
+                    position: static;
+                    margin-bottom: 8px;
+                    li {
+                        border: none;                         
+                        a {
+                            padding: 8px 8px 8px 61px;
+                            text-decoration: none;
+                            text-transform: capitalize;
+                        }
+                    }
+
+                    &.collapsed {
+                        visibility: hidden;
+                        position: absolute;
+                    }
+                }
+            }
+        }
+    }
+
+    ul {
+        margin: 0;
+        padding: 0;
+        overflow-y: auto;
+
+        li {
+            margin:0;
+            padding:0;
+            list-style-type: none;
+            border: none;
+            border-bottom: 1px solid #e6e6e6;
+            white-space: nowrap;
+            overflow: hidden;
+
+            a {
+                display: block;
+                padding: 18px;
+                color: $fore-color;
+                text-transform: uppercase;
+
+                &:hover {
+                    background-color: $selected-color;
+                }
+
+                i {
+                    padding-right: 18px;
+                }
+            }
+
+            &.active a {
+                color: $fore-selected-color;
+            }
+
+            ul {
+                visibility: hidden;
+                position: absolute;
+            }
+
+            
+        }
+    }
+
+    div#side-menu-toggle {
+        border-top: 1px solid #e6e6e6;
+        padding: 18px;
+        box-sizing: border-box;
+        text-align: right;
+    }
+}

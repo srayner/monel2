@@ -1,19 +1,46 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import SideMenu from './components/SideMenu/SideMenu';
 
 class App extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      active: 'Home',
+      menuItems: [
+        {
+          icon: 'fas fa-home',
+          text: 'Home',
+        },
+        {
+          icon: 'fas fa-chart-bar',
+          text: 'Reports',
+        },
+        {
+          icon: 'fas fa-cogs',
+          text: 'Settings',
+        },
+        {
+          icon: 'fas fa-users',
+          text: 'Users',
+        },
+        {
+          icon: 'fas fa-share-alt',
+          text: 'Social Media',
+        },
+        {
+          icon: 'fas fa-link',
+          text: 'Links',
+        }
+      ]
+    }
+  }
+  
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <SideMenu
+        items={this.state.menuItems}
+        active={this.state.active}/>
     );
   }
 }

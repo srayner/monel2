@@ -2,10 +2,10 @@ const stats = [
     {
         id: 1,
         config: {
-            titleTemplate: '${title}',
-            statTemplate: '${stat}',
-            diffTemplate: '${diff}',
-            infoTemplate: '${info}'
+            titleTemplate: '{title}',
+            statTemplate: '{stat}',
+            diffTemplate: '{diff}',
+            infoTemplate: '{info}'
         },
         data: {
             title: 'Users',
@@ -17,10 +17,10 @@ const stats = [
     {
         id: 2,
         config: {
-            titleTemplate: '${title}',
-            statTemplate: '${stat}%',
-            diffTemplate: '${diff}%',
-            infoTemplate: '${info}'
+            titleTemplate: '{title}',
+            statTemplate: '{stat}%',
+            diffTemplate: '{diff}%',
+            infoTemplate: '{info}'
         },
         data: {
             title: 'Faults',
@@ -32,15 +32,15 @@ const stats = [
     {
         id: 3,
         config: {
-            titleTemplate: '${title}',
-            statTemplate: '${stat}',
-            diffTemplate: '${diff}',
-            infoTemplate: '${info}'
+            titleTemplate: '{title}',
+            statTemplate: '{stat}',
+            diffTemplate: '{diff}',
+            infoTemplate: '{info}'
         },
         data: {
             title: 'Events',
-            stat: 12,
-            diff: 2,
+            stat: 33,
+            diff: 8,
             info: 'vs last week'
         }
     }

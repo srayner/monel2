@@ -8,6 +8,16 @@
     padding: 10px;
     margin-bottom: 20px;
 
+    &.primary {
+      background-color: #4285f4;
+      color: white;
+    }
+
+    &.secondary {
+      background-color: #cfcfcf;
+      color: black;
+    }
+    
     p {
       font-size: 13px;
       font-weight: 300;

@@ -3,7 +3,7 @@ import styles from './CardFooter.css';
 
 const CardFooter = (props) => {
     return (
-        <div class="CardFooter">
+        <div className="CardFooter">
             {props.children}
         </div>
     );

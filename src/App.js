@@ -13,6 +13,7 @@ import Table from './components/Table/Table';
 import data from './config/data';
 
 import CardFooter from './components/CardFooter/CardFooter';
+import Button from './components/Button/Button';
 
 class App extends Component {
   
@@ -43,13 +44,14 @@ class App extends Component {
                         <p>I'm in the footer.</p>
                     </CardFooter>
                 </Card>
-                <Card style="card-4">
+                <Card style="primary card-4">
                     <h2>This is a Card component</h2>
-                    <p>With shadow size 4.</p>
+                    <p>Primary colour, with shadow size 4.</p>
                 </Card>
-                <Card style="card-5">
+                <Button text="click-me"/>
+                <Card style="secondary card-5">
                     <h2>This is a Card component</h2>
-                    <p>With shadow size 5.</p>
+                    <p>Secondary colour, with shadow size 5.</p>
                 </Card>
             </div>
         );

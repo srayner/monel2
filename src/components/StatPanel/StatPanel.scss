@@ -1,9 +1,60 @@
 .StatPanel {
     background-color: white;
     border: none;
-    border-top: 3px solid white;
+    border-top: 4px solid white;
+    padding: 10px;
+    width: 110px;
+    color: #737373;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
 
     &.selected {
-        border-top: 3px solid blue;
+        border-top: 4px solid #4285f4;
+
+        &:hover {
+            border-top: 4px solid #4285f4;
+        }
+
+        .info {
+            display: block;
+        }
+    }
+
+    &:hover {
+        border-top: 4px solid #edf0f2;
+        background-color: #edf0f2;
+    }
+
+    .title {
+        margin:0;
+        padding-bottom: 10px;
+        font-size: 14px;
+    }
+
+    .stat {
+        margin:0;
+        padding-bottom: 5px;
+        font-size: 26px;
+        font-weight: 300;
+        color: black;
+    }
+
+    .diff {
+        margin:0;
+        padding-bottom: 5px;
+        font-size: 12px;
+
+        &.red {
+            color: red;
+        }
+
+        &.green {
+            color: green;
+        }
+    }
+
+    .info {
+        font-size: 12px;
+        display: none;
     }
 }

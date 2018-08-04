@@ -1,4 +1,4 @@
-$back-color: #fafafa;
+$back-color: #ffffff;
 $selected-color: #edf0f2;
 $fore-color:#737373;
 $fore-selected-color: #ef752f;
@@ -14,7 +14,7 @@ body {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #fafafa;
+    background-color: $back-color;
     overflow-x: hidden; /* Disable horizontal scroll */
     padding: 0;
     display: flex;

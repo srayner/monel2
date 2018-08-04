@@ -12,6 +12,8 @@ import stats from './config/stats';
 import Table from './components/Table/Table';
 import data from './config/data';
 
+import CardFooter from './components/CardFooter/CardFooter';
+
 class App extends Component {
   
     state = {
@@ -37,6 +39,9 @@ class App extends Component {
                 <Card style="card-3">
                     <h2>This is a Card component</h2>
                     <p>With shadow size 3.</p>
+                    <CardFooter>
+                        <p>I'm in the footer.</p>
+                    </CardFooter>
                 </Card>
                 <Card style="card-4">
                     <h2>This is a Card component</h2>

@@ -1,0 +1,9 @@
+.StatPanel {
+    background-color: white;
+    border: none;
+    border-top: 3px solid white;
+
+    &.selected {
+        border-top: 3px solid blue;
+    }
+}

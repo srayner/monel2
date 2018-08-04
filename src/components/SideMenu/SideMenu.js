@@ -27,19 +27,19 @@ class SideMenu extends Component {
             var childMenu = null;
             if (item.hasOwnProperty('children')) {
                 const children = item.children.map(child => {
-                    return <li><a>{child.text}</a></li>
+                    return <li key={child.text}><a>{child.text}</a></li>
                 });
                 childMenu = <ul>{children}</ul>;
             }
 
             return (
-                    <li className={this.state.active === item.text ? 'active' : ''}>
-                        <a onClick={() => this.itemClicked(item)}>
-                            <i className={item.icon + ' fa-lg fa-fw'}></i>
-                            {item.text}
-                        </a>
-                        {childMenu}
-                    </li>
+                <li key={item.text} className={this.state.active === item.text ? 'active' : ''}>
+                    <a onClick={() => this.itemClicked(item)}>
+                        <i className={item.icon + ' fa-lg fa-fw'}></i>
+                        {item.text}
+                    </a>
+                    {childMenu}
+                </li>
             );
         });
 

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import StatPanel from '../StatPanel/StatPanel';
-import styles from './StatPanelGroup.css';
+import './StatPanelGroup.css';
 
 class StatPanelGroup extends Component {
 

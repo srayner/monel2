@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './CardFooter.css';
+import './CardFooter.css';
 
 const CardFooter = (props) => {
     return (

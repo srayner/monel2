@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './StatPanel.css';
+import './StatPanel.css';
 
 //const fillTemplate = require('es6-dynamic-template');
 

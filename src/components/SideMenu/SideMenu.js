@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import styles from './SideMenu.css';
+import './SideMenu.css';
 
 class SideMenu extends Component {
 
@@ -53,7 +53,7 @@ class SideMenu extends Component {
         return (
             <nav className={menuClass}>
                 <ul>{menuItems}</ul>
-                <div className="side-menu-toggle" onClick={() => this.toggleClicked()}>
+                <div className="side-menu-toggle" onClick={this.toggleClicked}>
                     <i className={toggleClass}></i>
                 </div>
             </nav>

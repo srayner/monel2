@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Table.css';
+import './Table.css';
 
 const table = (props) => {
     const header = props.data.columns.map(column => {

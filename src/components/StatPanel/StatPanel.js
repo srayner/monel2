@@ -1,8 +1,6 @@
 import React from 'react';
 import './StatPanel.css';
 
-//const fillTemplate = require('es6-dynamic-template');
-
 const fillTemplate = (template, key, data) => {
     return template.replace('{' + key + '}', data);
 }

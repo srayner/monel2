@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { withRouter } from 'react-router';
-
 import './SideMenu.css';
 
 class SideMenu extends Component {
@@ -70,5 +69,4 @@ class SideMenu extends Component {
     }
 }
 
-const SideMenuWithRouter = withRouter(SideMenu);
-export default SideMenuWithRouter;
+export default withRouter(SideMenu);

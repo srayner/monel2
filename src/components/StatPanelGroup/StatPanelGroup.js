@@ -9,7 +9,6 @@ class StatPanelGroup extends Component {
     }
 
     itemClicked = (item) => {
-        console.log('click');
         this.setState({
             selected: item.id
         });

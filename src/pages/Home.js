@@ -5,7 +5,7 @@ import StatPanelGroup from '../components/StatPanelGroup/StatPanelGroup';
 import Table from '../components/Table/Table';
 import Button from '../components/Button/Button';
 
-const Demo = (props) => {
+const Home = (props) => {
     return (
         <React.Fragment>
             <h2>Statistics</h2>
@@ -38,4 +38,4 @@ const Demo = (props) => {
     );
 }
 
-export default Demo;
+export default Home;

@@ -10,8 +10,13 @@ import stats from './config/stats';
 import data from './config/data';
 
 // pages
-import Demo from './pages/Demo';
+import Home from './pages/Home';
+import Reports from './pages/Reports';
+import Settings from './pages/Settings';
+import Users from './pages/Users';
+import SocialMedia from './pages/SocialMedia';
 import Links from './pages/Links';
+
 
 class App extends Component {
   
@@ -26,8 +31,12 @@ class App extends Component {
             <Router>
                 <div className="App">
                     <SideMenu items={this.state.menuItems}/>
-                    <Route path="/demo" render={props => (<Demo stats={this.state.stats} data={this.state.data}/>)}/>
-                    <Route path="/links" render={props => (<Links/>)}/>
+                    <Route exact path="/" render={props => (<Home stats={this.state.stats} data={this.state.data}/>)}/>
+                    <Route exact path="/reports" render={props => (<Reports/>)}/>
+                    <Route exact path="/settings" render={props => (<Settings/>)}/>
+                    <Route exact path="/users" render={props => (<Users/>)}/>
+                    <Route exact path="/social-media" render={props => (<SocialMedia/>)}/>
+                    <Route exact path="/links" render={props => (<Links/>)}/>
                 </div>
             </Router>
         );

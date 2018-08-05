@@ -1,18 +1,13 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import { withRouter } from 'react-router';
+
 import './SideMenu.css';
 
 class SideMenu extends Component {
 
     state = {
         open: true,
-        active: this.props.items[0].text
-    }
-
-    itemClicked = (item) => {
-        this.setState({
-            ...this.state,
-            active: item.text
-        });
     }
 
     toggleClicked = () => {
@@ -33,11 +28,11 @@ class SideMenu extends Component {
             }
 
             return (
-                <li key={item.text} className={this.state.active === item.text ? 'active' : ''}>
-                    <a onClick={() => this.itemClicked(item)}>
+                <li key={item.text} className={this.props.location.pathname === item.route ? 'active' : ''}>
+                    <Link to={item.route}>
                         <i className={item.icon + ' fa-lg fa-fw'}></i>
                         {item.text}
-                    </a>
+                    </Link>
                     {childMenu}
                 </li>
             );
@@ -61,4 +56,5 @@ class SideMenu extends Component {
     }
 }
 
-export default SideMenu;
+const SideMenuWithRouter = withRouter(SideMenu);
+export default SideMenuWithRouter;

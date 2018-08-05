@@ -14,6 +14,10 @@ class SideMenu extends Component {
         this.setState({
             ...this.state,
             open: !this.state.open
+        }, () => {
+            if (this.props.hasOwnProperty('toggleCallback')) {
+                this.props.toggleCallback(this.state.open);
+            }
         });
     }
 

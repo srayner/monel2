@@ -21,16 +21,25 @@ import Links from './pages/Links';
 class App extends Component {
   
     state = {
+        menuExpanded: true,
         menuItems: menuConfig,
         stats: stats,
         data: data
     }
 
+    menuToggleCallback = (menuExpanded) => {
+        this.setState({
+            ...this.state,
+            menuExpanded: menuExpanded
+        });
+    }
+
     render() {
+        const className = this.state.menuExpanded ? 'App' : 'App wide';
         return (
             <Router>
-                <div className="App">
-                    <SideMenu items={this.state.menuItems}/>
+                <div className={className}>
+                    <SideMenu items={this.state.menuItems} toggleCallback={this.menuToggleCallback}/>
                     <Route exact path="/" render={props => (<Home stats={this.state.stats} data={this.state.data}/>)}/>
                     <Route exact path="/reports" render={props => (<Reports/>)}/>
                     <Route exact path="/settings" render={props => (<Settings/>)}/>

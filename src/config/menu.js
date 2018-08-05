@@ -10,16 +10,20 @@ const menuItems = [
         route: '/reports',
         children : [
             {
-                text: 'Overview'
+                text: 'Overview',
+                route: '/reports/overview'
             },
             {
-                text: 'Support Tickets'
+                text: 'Support Tickets',
+                route: '/reports/support-tickets'
             },
             {
-                text: 'Locations'
+                text: 'Locations',
+                route: '/reports/location',
             },
             {
-                text: 'Events'
+                text: 'Events',
+                route: '/reports/events'
             }
         ]
     },

@@ -19,16 +19,26 @@ class SideMenu extends Component {
 
     render() {
         const menuItems = this.props.items.map(item => {
-            var childMenu = null;
+            var childMenu, childClass, className;
             if (item.hasOwnProperty('children')) {
                 const children = item.children.map(child => {
-                    return <li key={child.text}><a>{child.text}</a></li>
+                    childClass = this.props.location.pathname === child.route ? 'active' : '';
+                    return (
+                        <li key={child.text} className={childClass}>
+                            <Link to={child.route}>
+                                {child.text}
+                            </Link>
+                        </li>
+                    );
                 });
                 childMenu = <ul>{children}</ul>;
+                className = this.props.location.pathname.startsWith(item.route) ? 'active' : '';
+            } else {
+                className = this.props.location.pathname === item.route ? 'active' : '';
             }
 
             return (
-                <li key={item.text} className={this.props.location.pathname === item.route ? 'active' : ''}>
+                <li key={item.text} className={className}>
                     <Link to={item.route}>
                         <i className={item.icon + ' fa-lg fa-fw'}></i>
                         {item.text}

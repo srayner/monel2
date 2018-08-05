@@ -7,34 +7,36 @@ import Button from '../components/Button/Button';
 
 const Home = (props) => {
     return (
-        <React.Fragment>
-            <h2>Statistics</h2>
-                <Card type="card-1">
+        <div className="grid">
+            <div>
+                <h2>Statistics</h2>
+                <Card type="card-2">
                     <StatPanelGroup items={props.stats}/>
-                    <p>This card has a shadow of size 1 and a hover effect. It contains a StatPanelGroup component,
-                        which in turn contains three StatPanel components.</p>
+                    <p>This card has a shadow of size 2. It contains a StatPanelGroup component,
+                    which in turn contains three StatPanel components.</p>
                 </Card>
+            </div>
+            <div>
+                <h2>Primary Card</h2>
+                <Card type="primary card-2">
+                    <h2>This is a Card component</h2>
+                    <p>Primary colour, with shadow size 4.</p>
+                </Card>
+            </div>
+            <div>
                 <h2>Simple Data</h2>
                 <Card type="card-2">
                     <Table data={props.data}/>
                 </Card>
-                <Card type="card-3">
-                    <h2>This is a Card component</h2>
-                    <p>With shadow size 3.</p>
-                    <CardFooter>
-                        <p>I'm in the footer.</p>
-                    </CardFooter>
-                </Card>
-                <Card type="primary card-4">
-                    <h2>This is a Card component</h2>
-                    <p>Primary colour, with shadow size 4.</p>
-                </Card>
-                <Button text="click-me"/>
-                <Card type="secondary card-5">
+            </div>
+            <div>
+                <h2>Secondary Card</h2>
+                <Card type="secondary card-2">
                     <h2>This is a Card component</h2>
                     <p>Secondary colour, with shadow size 5.</p>
                 </Card>
-        </React.Fragment>
+            </div>
+        </div>
     );
 }
 

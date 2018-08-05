@@ -1,3 +1,24 @@
+$breakpoints: (
+    'small'  : 767px,
+    'medium' : 992px,
+    'large'  : 1200px
+);
+
+@mixin respond-to($breakpoint) {
+    $value: map-get($breakpoints, $breakpoint);
+  
+    @if $value != null {
+        @media (min-width: $value) {
+            @content;
+        }
+    }
+
+    @else {
+        @warn "Unfortunately, no value could be retrieved from `#{$breakpoint}`. "
+            + "Please make sure it is defined in `$breakpoints` map.";
+    }
+}
+
 body {
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -31,5 +52,17 @@ h2 {
 
     &.wide {
         margin-left: 78px;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-column-gap: 20px;
+        grid-auto-rows: minmax(100px, auto);
+        grid-row-gap: 20px;
+
+        @include respond-to('medium') {
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
 }

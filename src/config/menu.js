@@ -19,7 +19,7 @@ const menuItems = [
             },
             {
                 text: 'Locations',
-                route: '/reports/location',
+                route: '/reports/locations',
             },
             {
                 text: 'Events',

@@ -1,0 +1,63 @@
+
+label {
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+}
+
+.input-control {
+    display: table;
+    width: 100%;
+    padding-top: 5px;
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    display: table-cell;
+    font-family: inherit;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 13px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    width: 100%;
+    outline: none;
+}
+
+.input-prepend {
+    display: table-cell;
+    margin-top: 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-right: none;
+    padding: 10px;
+    font-size: 13px;
+    width: 1%;
+    white-space: nowrap;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+.input-append {
+    display: table-cell;
+    margin-top: 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-left: none;
+    padding: 10px;
+    font-size: 13px;
+    width: 1%;
+    white-space: nowrap;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+input[type="text"]:not(:first-child) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+input[type="text"]:not(:last-child) {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}

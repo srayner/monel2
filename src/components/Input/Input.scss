@@ -12,7 +12,7 @@ label {
     margin-bottom: 10px;
 }
 
-input[type="text"] {
+input[type="text"], input[type="email"] {
     display: table-cell;
     font-family: inherit;
     box-sizing: border-box;

@@ -5,19 +5,20 @@ const formConfig = [
         props: {required: true}
     },
     {
-        key: "age",
-        label: "Age",
-        type: "number"
+        key: "username",
+        label: "Username",
+        props: {required: true}
     },
     {
-        key: "rating",
-        label: "Rating",
-        type: "number",
-        props: {min: 0, max: 5}
+        key: "email",
+        label: "Email Address",
+        type: "email",
+        props: {required: true}
     },
     {
-        key: "qualification",
-        label: "Qualification"
+        key: "salary",
+        label: "Salary",
+        props: {required: true}
     }
 ]
 

@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import './DynamicForm.css';
 
 class DynamicForm extends Component
 {
@@ -11,7 +12,7 @@ class DynamicForm extends Component
                 <form className="dynamic-form" onSubmit={(e)=>{this.onSubmit(e)}}>
                     {this.renderForm()}
                     <div className="form-group">
-                        <button type="submit">submit</button>
+                        <button className="Button primary" type="submit">Add User</button>
                     </div>
                 </form>
             </div>

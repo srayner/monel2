@@ -1,19 +1,32 @@
-import React from 'react';
+import React, {Component} from 'react';
 import DynamicForm from '../components/DynamicForm/DynamicForm';
 import formConfig from '../config/form';
+import axios from 'axios';
 
-const SocialMedia = (props) => {
-    return (
-        <div>
-            <h2>Social Media</h2>
-            <DynamicForm
-                className="form"
-                title="Registration"
-                model={formConfig}
-                onSubmit = {(model) => {this.onSubmit(model)}}
-            />
-        </div>
-    )
+class SocialMedia extends Component {
+    
+    render () {
+        return (
+            <div>
+                <h2>Social Media</h2>
+                <DynamicForm
+                    className="form"
+                    title="Add User"
+                    model={formConfig}
+                    onSubmit = {(model) => {this.onSubmit(model)}}
+                />
+            </div>
+        )
+    }
+
+    onSubmit (model){
+        const $url = 'https://test-4e910.firebaseio.com/users.json';
+    
+        axios.post($url, model)
+            .then(response => {
+                console.log('post response');
+            });
+    }
 }
 
 export default SocialMedia;

@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import Notification from '../components/Notification/Notification';
 import DynamicForm from '../components/DynamicForm/DynamicForm';
 import formConfig from '../config/form';
 import axios from 'axios';
@@ -9,6 +10,7 @@ class SocialMedia extends Component {
         return (
             <div>
                 <h2>Social Media</h2>
+                <Notification text="test notification" close/>
                 <DynamicForm
                     className="form"
                     title="Add User"
